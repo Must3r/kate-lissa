@@ -1,0 +1,34 @@
+// Base colors
+$black: #202020;
+$white: #ffffff; 
+$red: #f52a1d;
+$grey: #727272;
+$light-grey: #fafafa;
+
+// Semantic colors 
+$primary: $black;
+$secondary: $white;
+$danger: $red;
+
+// Text colors
+$text: (
+  primary: $black,
+  light: $white,
+  grey: $grey
+);
+
+// Background colors
+$bg: (
+  primary: $white,
+  secondary: $black,
+  danger: $red
+);
+
+// Base sizes
+$base-font-size: 20px;
+$base-margin: 1rem;
+$base-padding: 1rem;
+
+// Layout values
+$logo-height: 80px;
+$product-row-gap: 20px;

@@ -1,0 +1,172 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $base-font-size;
+  font-family: 'Gordita', serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: map-get($bg, primary);
+  margin: 0;
+  min-height: 100vh;
+}
+
+a {
+  color: map-get($text, 'primary');
+}
+
+// Backgrounds
+.bg {
+  @each $color in map-keys($bg) {
+    &-#{$color} {
+      background-color: map-get($bg, $color) !important;
+    }
+  }
+}
+
+// Positions
+@each $position in relative,
+absolute,
+fixed {
+  .p-#{$position} {
+    position: $position !important;
+  }
+}
+
+// Displays
+@each $val in block,
+inline-block,
+inline,
+flex,
+inline-flex,
+none {
+  .d-#{$val} {
+    display: $val !important;
+  }
+}
+
+// Justify content
+@each $pos in center,
+start,
+end,
+flex-start,
+flex-end,
+space-between,
+space-around,
+space-evenly,
+stretch {
+  .justify-#{$pos} {
+    justify-content: $pos !important;
+  }
+}
+
+// Align items
+@each $pos in center,
+start,
+end,
+flex-start,
+flex-end,
+stretch {
+  .align-#{$pos} {
+    align-items: $pos !important;
+  }
+}
+
+// Buttons
+.button {
+  display: inline-block;
+  padding: 1rem 1.2rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid currentColor;
+  line-height: 1;
+  @each $color in map-keys($text) {
+    &-#{$color} {
+      color: map-get($text, $color) !important;
+    }
+  }
+  &-lg {
+    padding: 1rem 2.25rem;
+    font-size: 1.6rem;
+  }
+}
+
+// Gutters
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
+.px-auto {
+  padding-left: auto;
+  padding-right: auto;
+}
+.py-auto {
+  padding-top: auto;
+  padding-bottom: auto;
+}
+.pl-auto {
+  padding-left: auto;
+}
+.pr-auto {
+  padding-right: auto;
+}
+@for $i from 1 through 25 {
+  $gutter: calc(4px * #{$i});
+  .mx-#{$i} {
+    margin-left: $gutter !important;
+    margin-right: $gutter !important;
+  }
+  .my-#{$i} {
+    margin-top: $gutter !important;
+    margin-bottom: $gutter !important;
+  }
+  .mt-#{$i} {
+    margin-top: $gutter !important;
+  }
+  .mb-#{$i} {
+    margin-bottom: $gutter !important;
+  }
+  .ml-#{$i} {
+    margin-left: $gutter !important;
+  }
+  .mr-#{$i} {
+    margin-right: $gutter !important;
+  }
+  .px-#{$i} {
+    padding-left: $gutter !important;
+    padding-right: $gutter !important;
+  }
+  .py-#{$i} {
+    padding-top: $gutter !important;
+    padding-bottom: $gutter !important;
+  }
+  .pt-#{$i} {
+    padding-top: $gutter !important;
+  }
+  .pb-#{$i} {
+    padding-bottom: $gutter !important;
+  }
+  .pl-#{$i} {
+    padding-left: $gutter !important;
+  }
+  .pr-#{$i} {
+    padding-right: $gutter !important;
+  }
+}
