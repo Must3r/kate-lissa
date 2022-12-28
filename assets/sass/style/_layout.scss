@@ -1,6 +1,6 @@
 .container {
-  width: 1600px;
-  max-width: 100%;
+  padding: 0 7.813vw;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -80,6 +80,7 @@
   &-item {
     position: relative;
     img {
+      display: block;
       width: 100%;
       height: 100vh;
       max-height: 880px;

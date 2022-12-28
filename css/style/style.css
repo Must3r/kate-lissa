@@ -164,6 +164,13 @@ a {
     color: #ffffff !important; }
   .button-grey {
     color: #727272 !important; }
+  .button-link {
+    padding: 0;
+    padding-bottom: 8px;
+    border: 0;
+    border-bottom: 2px solid currentColor; }
+    .button-link:hover {
+      color: #b4b4b4; }
   .button-lg {
     padding: 1rem 2.25rem;
     font-size: 1.6rem; }
@@ -1197,8 +1204,8 @@ a {
   padding-right: calc(4px * 25) !important; }
 
 .container {
-  width: 1600px;
-  max-width: 100%;
+  padding: 0 7.813vw;
+  width: 100%;
   margin: 0 auto; }
 
 .site-header {
@@ -1261,6 +1268,7 @@ a {
     position: relative; }
     .site-slider-item img,
     .site-footer-item img {
+      display: block;
       width: 100%;
       height: 100vh;
       max-height: 880px;
