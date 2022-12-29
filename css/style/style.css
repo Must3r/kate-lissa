@@ -46,6 +46,9 @@ h5 {
 .text-grey {
   color: #727272 !important; }
 
+.text-danger {
+  color: #f52a1d !important; }
+
 .text-h1 {
   font-weight: normal;
   font-size: 4.9rem; }
@@ -164,6 +167,8 @@ a {
     color: #ffffff !important; }
   .button-grey {
     color: #727272 !important; }
+  .button-danger {
+    color: #f52a1d !important; }
   .button-link {
     padding: 0;
     padding-bottom: 8px;
@@ -1335,9 +1340,7 @@ a {
     .site-product-image img {
       width: 100%; }
   .site-product-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: end; }
+    text-align: center; }
   .site-product-title {
     font-size: 1.2rem; }
   .site-product-price {
