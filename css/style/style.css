@@ -1351,6 +1351,9 @@ a {
   justify-content: space-between;
   align-items: center; }
 
+.site-footer-col {
+  width: 281px; }
+
 .site-footer-contacts {
   padding: 72px 1rem; }
   .site-footer-contacts-menu ul {
