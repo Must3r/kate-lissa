@@ -20,6 +20,13 @@
   font-weight: 500;
   font-style: normal; }
 
+@font-face {
+  font-family: 'Gordita';
+  src: url("../../assets/fonts/Gordita-Bold.eot");
+  src: local("Gordita Bold"), local("Gordita-Bold"), url("../../assets/fonts/Gordita-Bold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Gordita-Bold.woff2") format("woff2"), url("../../assets/fonts/Gordita-Bold.woff") format("woff"), url("../../assets/fonts/Gordita-Bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+
 h1 {
   font-family: 'Bebas Neue', cursive; }
 
@@ -81,6 +88,9 @@ h5 {
 
 .fw-medium {
   font-weight: 500 !important; }
+
+.fw-bold {
+  font-weight: 600 !important; }
 
 *,
 *:before,
@@ -205,7 +215,8 @@ input[type=button].button,
   text-transform: uppercase;
   text-decoration: none;
   border: 2px solid currentColor;
-  line-height: 1; }
+  line-height: 1;
+  cursor: pointer; }
   input[type=button].button-primary,
   .button-primary {
     color: #202020 !important; }
@@ -1260,6 +1271,16 @@ input[type=button].button,
 .pr-25 {
   padding-right: calc(4px * 25) !important; }
 
+.divider {
+  background-color: #202020;
+  width: 100%;
+  height: 2px; }
+  .divider-with-title {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    white-space: nowrap; }
+
 .container {
   padding: 0 7.813vw;
   width: 100%;
@@ -1426,6 +1447,7 @@ input[type=button].button,
     .product-gallery-thumbs button {
       display: block;
       margin-bottom: 1rem;
+      border: 1px solid transparent;
       cursor: pointer; }
       .product-gallery-thumbs button img {
         display: block;
@@ -1434,8 +1456,10 @@ input[type=button].button,
         object-fit: cover; }
       .product-gallery-thumbs button.active {
         border: 1px solid; }
-  .product-gallery-image img {
+  .product-gallery-image {
     width: 100%; }
+    .product-gallery-image img {
+      width: 100%; }
 
 .product-info {
   width: 50%;
@@ -1464,6 +1488,64 @@ input[type=button].button,
 
 .product-price {
   font-size: 1.6rem; }
+
+.product-actions .button {
+  min-width: 370px; }
+
+.product-match-item {
+  width: 50%; }
+  .product-match-item:nth-child(even) {
+    margin-left: 1rem; }
+  .product-match-item-title {
+    width: 100%;
+    font-size: 1.6rem; }
+  .product-match-item-content {
+    width: 100%; }
+
+.expansion-panel {
+  overflow: hidden; }
+  .expansion-panel-content {
+    background: linear-gradient(180deg, #202020 0%, rgba(32, 32, 32, 0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    height: 60px; }
+    .expansion-panel-content.open {
+      background: none;
+      -webkit-text-fill-color: #202020;
+      text-fill-color: #202020;
+      height: auto; }
+
+.counter {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8rem;
+  line-height: 1;
+  border: 2px solid; }
+  .counter-minus, .counter-plus {
+    display: flex;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    font-size: 1.5rem;
+    line-height: 1; }
+  .counter-number {
+    display: inline-block;
+    padding: 0;
+    width: 40px;
+    font-family: 'Gordita', serif;
+    font-size: 1rem;
+    text-align: center;
+    border: 0; }
+
+.wishlist {
+  position: relative; }
+  .wishlist input[type=checkbox] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0; }
 
 .slick-dotted {
   margin-bottom: 0 !important; }

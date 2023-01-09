@@ -34,6 +34,18 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Gordita';
+  src: url('../../assets/fonts/Gordita-Bold.eot');
+  src: local('Gordita Bold'), local('Gordita-Bold'),
+    url('../../assets/fonts/Gordita-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../../assets/fonts/Gordita-Bold.woff2') format('woff2'),
+    url('../../assets/fonts/Gordita-Bold.woff') format('woff'),
+    url('../../assets/fonts/Gordita-Bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 @for $i from 1 to 6 {
