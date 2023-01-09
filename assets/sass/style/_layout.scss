@@ -192,6 +192,72 @@
   }
 }
 
+.product {
+  &-content {
+    display: flex;
+    justify-content: stretch;
+  }
+  &-gallery {
+    display: flex;
+    width: 50%;
+    &-thumbs {
+      margin-right: 1rem;
+      button {
+        display: block;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        img {
+          display: block;
+          width: 116px;
+          height: 116px;
+          object-fit: cover;
+        }
+        &.active {
+          border: 1px solid;
+        }
+      }
+    }
+    &-image {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &-info {
+    width: 50%;
+    padding-left: 100px;
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      width: 100%;
+    }
+    &-title {
+      margin: 0;
+      font-family: 'Gordita', serif;
+      font-weight: normal;
+      font-size: 2.4rem;
+    }
+    .button {
+      min-width: 95px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      margin-bottom: 8px;
+      &:not(:last-child) {
+        margin-right: 4px;
+      }
+      &.active {
+        background-color: $black;
+        color: map-get($text, 'light');
+        border: 2px solid $black;
+      }
+    }
+  }
+  &-price {
+    font-size: 1.6rem;
+  }
+}
+
 // Slick slider custom styles
 
 .slick {

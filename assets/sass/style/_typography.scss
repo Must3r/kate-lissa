@@ -1,5 +1,17 @@
 @font-face {
   font-family: 'Gordita';
+  src: url('../../assets/fonts/Gordita-Light.eot');
+  src: local('Gordita Light'), local('Gordita-Light'),
+    url('../../assets/fonts/Gordita-Light.eot?#iefix') format('embedded-opentype'),
+    url('../../assets/fonts/Gordita-Light.woff2') format('woff2'),
+    url('../../assets/fonts/Gordita-Light.woff') format('woff'),
+    url('../../assets/fonts/Gordita-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gordita';
   src: url('../../assets/fonts/Gordita-Regular.eot');
   src: local('Gordita Regular'), local('Gordita-Regular'),
     url('../../assets/fonts/Gordita-Regular.eot?#iefix') format('embedded-opentype'),
@@ -26,7 +38,7 @@
 
 @for $i from 1 to 6 {
   h#{$i} {
-    font-family: 'Bebas Neue', cursive; 
+    font-family: 'Bebas Neue', cursive;
   }
 }
 
@@ -44,8 +56,21 @@ right {
       color: map-get($text, $color) !important;
     }
   }
+  @each $type in capitalize, uppercase, lowercase, none {
+    &-transform-#{$type} {
+      text-transform: #{$type} !important;
+    }
+  }
   &-h1 {
+    margin: 0;
     font-weight: normal;
     font-size: 4.9rem;
+  }
+}
+
+
+@each $weight in map-keys($fw) {
+  .fw-#{$weight} {
+    font-weight: map-get($fw, $weight) !important;
   }
 }

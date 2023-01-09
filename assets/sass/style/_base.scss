@@ -19,6 +19,24 @@ body {
 
 a {
   color: map-get($text, 'primary');
+  text-decoration: none;
+}
+
+button,
+input[type=button] {
+  padding: 0;
+  background-color: transparent;
+  font-family: 'Gordita', serif;
+  font-size: 1rem;
+  border: 0;
+  cursor: pointer;
+}
+
+.underline {
+  border-bottom: 1px solid currentColor;
+  &-far {
+    padding-bottom: 0.2rem;
+  }
 }
 
 // Backgrounds
@@ -79,6 +97,7 @@ stretch {
 }
 
 // Buttons
+input[type=button].button,
 .button {
   display: inline-block;
   padding: 1rem 1.2rem;

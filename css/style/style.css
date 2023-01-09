@@ -1,6 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @font-face {
   font-family: 'Gordita';
+  src: url("../../assets/fonts/Gordita-Light.eot");
+  src: local("Gordita Light"), local("Gordita-Light"), url("../../assets/fonts/Gordita-Light.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Gordita-Light.woff2") format("woff2"), url("../../assets/fonts/Gordita-Light.woff") format("woff"), url("../../assets/fonts/Gordita-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gordita';
   src: url("../../assets/fonts/Gordita-Regular.eot");
   src: local("Gordita Regular"), local("Gordita-Regular"), url("../../assets/fonts/Gordita-Regular.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Gordita-Regular.woff2") format("woff2"), url("../../assets/fonts/Gordita-Regular.woff") format("woff"), url("../../assets/fonts/Gordita-Regular.ttf") format("truetype");
   font-weight: normal;
@@ -49,9 +56,31 @@ h5 {
 .text-danger {
   color: #f52a1d !important; }
 
+.text-transform-capitalize {
+  text-transform: capitalize !important; }
+
+.text-transform-uppercase {
+  text-transform: uppercase !important; }
+
+.text-transform-lowercase {
+  text-transform: lowercase !important; }
+
+.text-transform-none {
+  text-transform: none !important; }
+
 .text-h1 {
+  margin: 0;
   font-weight: normal;
   font-size: 4.9rem; }
+
+.fw-light {
+  font-weight: 300 !important; }
+
+.fw-normal {
+  font-weight: 400 !important; }
+
+.fw-medium {
+  font-weight: 500 !important; }
 
 *,
 *:before,
@@ -70,7 +99,22 @@ body {
   min-height: 100vh; }
 
 a {
-  color: #202020; }
+  color: #202020;
+  text-decoration: none; }
+
+button,
+input[type=button] {
+  padding: 0;
+  background-color: transparent;
+  font-family: 'Gordita', serif;
+  font-size: 1rem;
+  border: 0;
+  cursor: pointer; }
+
+.underline {
+  border-bottom: 1px solid currentColor; }
+  .underline-far {
+    padding-bottom: 0.2rem; }
 
 .bg-primary {
   background-color: #ffffff !important; }
@@ -153,6 +197,7 @@ a {
 .align-stretch {
   align-items: stretch !important; }
 
+input[type=button].button,
 .button {
   display: inline-block;
   padding: 1rem 1.2rem;
@@ -161,21 +206,28 @@ a {
   text-decoration: none;
   border: 2px solid currentColor;
   line-height: 1; }
+  input[type=button].button-primary,
   .button-primary {
     color: #202020 !important; }
+  input[type=button].button-light,
   .button-light {
     color: #ffffff !important; }
+  input[type=button].button-grey,
   .button-grey {
     color: #727272 !important; }
+  input[type=button].button-danger,
   .button-danger {
     color: #f52a1d !important; }
+  input[type=button].button-link,
   .button-link {
     padding: 0;
     padding-bottom: 8px;
     border: 0;
     border-bottom: 2px solid currentColor; }
+    input[type=button].button-link:hover,
     .button-link:hover {
       color: #b4b4b4; }
+  input[type=button].button-lg,
   .button-lg {
     padding: 1rem 2.25rem;
     font-size: 1.6rem; }
@@ -1361,6 +1413,57 @@ a {
     padding-left: 0; }
   .site-footer-contacts-menu a {
     text-decoration: none; }
+
+.product-content {
+  display: flex;
+  justify-content: stretch; }
+
+.product-gallery {
+  display: flex;
+  width: 50%; }
+  .product-gallery-thumbs {
+    margin-right: 1rem; }
+    .product-gallery-thumbs button {
+      display: block;
+      margin-bottom: 1rem;
+      cursor: pointer; }
+      .product-gallery-thumbs button img {
+        display: block;
+        width: 116px;
+        height: 116px;
+        object-fit: cover; }
+      .product-gallery-thumbs button.active {
+        border: 1px solid; }
+  .product-gallery-image img {
+    width: 100%; }
+
+.product-info {
+  width: 50%;
+  padding-left: 100px; }
+  .product-info header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%; }
+  .product-info-title {
+    margin: 0;
+    font-family: 'Gordita', serif;
+    font-weight: normal;
+    font-size: 2.4rem; }
+  .product-info .button {
+    min-width: 95px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 8px; }
+    .product-info .button:not(:last-child) {
+      margin-right: 4px; }
+    .product-info .button.active {
+      background-color: #202020;
+      color: #ffffff;
+      border: 2px solid #202020; }
+
+.product-price {
+  font-size: 1.6rem; }
 
 .slick-dotted {
   margin-bottom: 0 !important; }
