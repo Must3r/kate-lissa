@@ -6,8 +6,7 @@ $(document).ready(function(){
 });
 
 // Carousel
-let currentImage = $('.product-gallery-thumbs button.active').find('img')[0].src
-console.log(currentImage)
+let currentImage = $('.product-gallery-thumbs button.active').find('img')[0]?.src
 $('.product-gallery-image').append(`<img src="${currentImage}" />`)
 $('.product-gallery-thumbs button').click(function() {
   $(this).addClass('active')
@@ -23,7 +22,6 @@ let quantity = parseInt($('.product-quantity .counter-number').val())
 let size = $('.product-size .button.active').val()
 let color = $('.product-color .button.active').val()
 let isFav = false
-console.log(isFav)
 $('.product-size .button').click(function() {
   $(this).addClass('active')
   $(this).siblings().removeClass('active')
@@ -61,4 +59,24 @@ $('.wishlist input[type=checkbox]').click(function(e) {
   } else {
     $(this).parent().find('.wishlist-icon').html('&#9825;')
   }
+})
+
+// Filtering and sorting
+const sortings = [
+  { text: 'Price low to high', value: 'asc' },
+  { text: 'Price high to low', value: 'desc' }
+]
+$.each(sortings, function(index, value) {
+  $('.sort-list').append(`<li>${value.text}</li>`)
+})
+$('.sort-title').text(sortings[0].text)
+$('.filter input[type=checkbox]').click(function() {
+  $(this).parent().toggleClass('active')
+})
+$('.sort input[type=checkbox]').click(function(e) {
+  $(this).parent().parent().toggleClass('open')
+})
+$('.sort-list li').click(function() {
+  $('.sort-title').text($(this).text())
+  $(this).parent().parent().toggleClass('open')
 })

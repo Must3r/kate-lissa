@@ -1539,13 +1539,44 @@ input[type=button].button,
     text-align: center;
     border: 0; }
 
-.wishlist {
+.wishlist,
+.filter,
+.sort {
   position: relative; }
-  .wishlist input[type=checkbox] {
+  .wishlist input[type=checkbox],
+  .filter input[type=checkbox],
+  .sort input[type=checkbox] {
     position: absolute;
     width: 1px;
     height: 1px;
     opacity: 0; }
+
+.filter.active {
+  background-color: #202020;
+  color: #ffffff; }
+
+.sort.open .sort-list {
+  display: block; }
+
+.sort-list {
+  position: absolute;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  top: calc(100% - 2px);
+  right: 0;
+  margin: 0;
+  padding: 0;
+  width: 320px;
+  list-style-type: none;
+  border: 2px solid currentColor;
+  z-index: 2; }
+  .sort-list li {
+    background-color: transparent;
+    padding: 0.25rem 1.5rem;
+    cursor: pointer; }
+    .sort-list li:hover {
+      background-color: #202020;
+      color: #ffffff; }
 
 .slick-dotted {
   margin-bottom: 0 !important; }

@@ -324,7 +324,9 @@
   }
 }
 
-.wishlist {
+.wishlist,
+.filter,
+.sort {
   position: relative;
   input[type=checkbox] {
     position: absolute;
@@ -334,6 +336,39 @@
   }
 }
 
+.filter {
+  &.active {
+    background-color: map-get($bg, 'secondary');
+    color: map-get($text, 'light');
+  }
+}
+.sort {
+  &.open .sort-list {
+    display: block;
+  }
+  &-list {
+    position: absolute;
+    display: none;
+    background-color: rgba(map-get($bg, 'primary'), 0.9);
+    top: calc(100% - 2px);
+    right: 0;
+    margin: 0;
+    padding: 0;
+    width: 320px;
+    list-style-type: none;
+    border: 2px solid currentColor;
+    z-index: 2;
+    li {
+      background-color: transparent;
+      padding: 0.25rem 1.5rem;
+      cursor: pointer;
+      &:hover {
+        background-color: map-get($bg, 'secondary');
+        color: map-get($text, 'light');
+      }
+    }
+  }
+}
 // Slick slider custom styles
 
 .slick {
